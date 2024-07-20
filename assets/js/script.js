@@ -62,7 +62,9 @@ const createRow = (client) =>{
     document.querySelector('.areaClientes').appendChild(newRow)
 }
 const updateTable = () => {
-    const dbClient = readClient()
-    dbClient.forEach(createRow)
+    const areaClientes = document.querySelector('.areaClientes');
+    areaClientes.innerHTML = ''; // Limpa a área de clientes
+    const dbClient = readClient();
+    dbClient.forEach(createRow);
 }
 document.getElementById('btn-salvar').addEventListener('click', saveClient)
