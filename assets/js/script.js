@@ -46,20 +46,20 @@ const saveClient = () => {
         cidade: document.getElementById('cidade').value,
         telefone: document.getElementById('telefone').value
     }
-    console.log('Cadastrado');
     createClient(client);
     clearFields()
+    updateTable()
 }
 //Atualiza clientes
 const createRow = (client) =>{
-    const newRow = document.createElement('div')
+    const newRow = document.createElement('tr')
     newRow.innerHTML = `
-    Nome: ${client.nome}</br>
-    Email: ${client.email}</br>
-    Cidade: ${client.cidade}</br>
-    Telefone: ${client.telefone}</br>
+    <td>${client.nome}</td>
+    <td>${client.email}</td>
+    <td>${client.cidade}</td>
+    <td>${client.telefone}</td>
     `
-    document.querySelector('.areaClientes').appendChild(newRow)
+    document.querySelector('tbody').appendChild(newRow)
 }
 const updateTable = () => {
     const areaClientes = document.querySelector('.areaClientes');

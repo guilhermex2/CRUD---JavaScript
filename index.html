@@ -4,18 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>CRUD</title>
 </head>
 <body>
     <header>
-        <h1>Cadastro Clientes</h1>
+        <div class="title">
+            <h1>Cadastro Clientes</h1>
+        </div>
     </header>
     <main>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Cidade</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
         <form action="" id="form">
-            <input id="nome" class="fields" type="text" placeholder="nome">
-            <input id="email" class="fields" type="text" placeholder="email">
-            <input id="cidade" class="fields" type="text" placeholder="cidade">
-            <input id="telefone" class="fields" type="text" placeholder="telefone">
+            <input id="nome" class="fields" type="text" placeholder="nome" required>
+            <input id="email" class="fields" type="text" placeholder="email" required>
+            <input id="cidade" class="fields" type="text" placeholder="cidade" required>
+            <input id="telefone" class="fields" type="text" placeholder="telefone" required>
         </form>
         <button type="submit" id="btn-salvar">Salvar</button>
         <div class="areaClientes">
